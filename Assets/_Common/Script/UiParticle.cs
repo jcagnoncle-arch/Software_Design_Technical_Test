@@ -29,6 +29,7 @@ public class UiParticle : MonoBehaviour
         StartCoroutine(Travel());
     }
     
+    //Animation to move the "Particle" to the destination
     private IEnumerator Travel()
     {
         float index = default;

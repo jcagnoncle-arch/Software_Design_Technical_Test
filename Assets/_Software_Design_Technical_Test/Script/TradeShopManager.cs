@@ -24,12 +24,13 @@ public class TradeShopManager : CurrencyScreen
     {
         menuAnimator = GetComponent<Animator>();
     }
-
+    //Hide Pop up
     public void HideMenu()
     {
         menuAnimator.SetBool("Show", false);
     }
 
+    //Update the counters in the shop depending on the amount of coin possessed
     public void UpdateShopUi()
     {
         diamondAmmount.text = ExcheableDiamond.ToString();
@@ -38,6 +39,7 @@ public class TradeShopManager : CurrencyScreen
         buttonAnimator.SetBool("Shake", tradeInterractableGroup.interactable);
     }
 
+    //Change mod when the toggle is pressed
     public void ToggleMaxPressed()
     {
         if (maxToggle.isOn)
@@ -52,6 +54,7 @@ public class TradeShopManager : CurrencyScreen
         UpdateShopUi();
     }
 
+    //Trigger Animation when the pop up is supposed to appear
     private void OnEnable()
     {
         menuAnimator.SetBool("Show", true);

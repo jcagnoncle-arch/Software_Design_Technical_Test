@@ -55,10 +55,9 @@ public class UiManager : MonoBehaviour
     {
         shop.gameObject.SetActive(tradeOpen);
     }
-
+    //Start the animations for all coins trade
     public void ShopTrade()
     {
-
         StartCoroutine(Purchase(shop.ExcheableDiamond));
     }
 
@@ -66,7 +65,7 @@ public class UiManager : MonoBehaviour
     {
         int particleCount = 0;
 
-        while (particleCount<ammountPurchased)
+        while (particleCount < ammountPurchased)
         {
             particleCount++;
             BuyDiamond();
@@ -74,18 +73,19 @@ public class UiManager : MonoBehaviour
         }
     }
 
+    //Reset the counters appearance
     private IEnumerator ResetCoin()
     {
         yield return new WaitForSeconds(TIME_PER_PARTICLE+0.1F);
         hud.ChangeCurrency(true, 0);
     }
-
+   
     private IEnumerator ResetDiamond()
     {
         yield return new WaitForSeconds(TIME_PER_PARTICLE + 0.1F);
         hud.ChangeCurrency(false, 0);
     }
-
+    //Start the Animation to get the diamond
     private void BuyDiamond()
     {
         GameManager.instance.ChangeCoinAmmount(-100);
