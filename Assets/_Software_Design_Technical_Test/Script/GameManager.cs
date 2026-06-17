@@ -38,11 +38,13 @@ public class GameManager : MonoBehaviour
     public void ChangeDiamondAmount(int ammount)
     {
         diamondAmmount += ammount;
+        UpdateCurrencyAmmount();
     }
 
     public void ChangeCoinAmmount(int ammount)
     {
         coinAmmount += ammount;
+        UpdateCurrencyAmmount();
     }
 
     // Update is called once per frame
