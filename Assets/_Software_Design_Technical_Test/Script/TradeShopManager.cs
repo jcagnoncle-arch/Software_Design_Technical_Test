@@ -4,17 +4,15 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class TradeShopManager : MonoBehaviour
+public class TradeShopManager : CurrencyScreen
 {
 
     [SerializeField] private int price = 100;
-    [SerializeField] private TextMeshProUGUI coinAmmount = default;
-    [SerializeField] private TextMeshProUGUI diamondAmmount = default;
+
     [SerializeField] private Toggle maxToggle = default;
     [SerializeField] private CanvasGroup tradeInterractableGroup = default;
     [SerializeField]private Animator buttonAnimator = default;
-    [SerializeField]public Transform diamondIcon = default;
-    [SerializeField]public Transform coinIcon = default;
+
     private Animator menuAnimator = default;
 
 

@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class HUDManager : MonoBehaviour
+public class HUDManager : CurrencyScreen
 {
     [SerializeField] private TextMeshProUGUI coinCounter = default;
     [SerializeField] private TextMeshProUGUI diamondCounter = default;
-    [SerializeField] public Transform diamondIcon = default;
-    [SerializeField] public Transform coinIcon = default;
     [SerializeField] public Animator diamondCounterAnimator = default;
     [SerializeField] public Animator coinCounterAnimator = default;
 
@@ -26,10 +24,10 @@ public class HUDManager : MonoBehaviour
 
     public void UpdateCoinAmmount(int ammount)
     {
-        coinCounter.text = ammount.ToString();
+        coinAmmount.text = ammount.ToString();
     }
     public void UpdateDiamondAmmount(int ammount)
     {
-        diamondCounter.text = ammount.ToString();
+        diamondAmmount.text = ammount.ToString();
     }
 }
